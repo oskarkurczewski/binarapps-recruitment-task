@@ -1,0 +1,88 @@
+[
+   {
+      "question": "Select animals",
+      "all_words": [
+         "hole",
+         "sofa",
+         "pear",
+         "tiger",
+         "oatmeal",
+         "square",
+         "nut",
+         "cub",
+         "shirt",
+         "tub",
+         "passenger",
+         "cow"
+      ],
+      "good_words": ["tiger", "cow"]
+   },
+   {
+      "question": "Select car brands",
+      "all_words": [
+         "pipe",
+         "audi",
+         "coca cola",
+         "harnaś",
+         "bmw",
+         "canon",
+         "tuna",
+         "book",
+         "fender",
+         "tymbark",
+         "gibson",
+         "mercedes",
+         "car",
+         "cab"
+      ],
+      "good_words": ["mercedes", "bmw", "audi"]
+   },
+   {
+      "question": "Select colors",
+      "all_words": [
+         "jeans",
+         "existence",
+         "ink",
+         "red",
+         "blue",
+         "yellow",
+         "laugh",
+         "behavior",
+         "expansion",
+         "white",
+         "black",
+         "cakes"
+      ],
+      "good_words": ["red", "blue", "yellow", "white", "black"]
+   },
+   {
+      "question": "Select vehicles",
+      "all_words": [
+         "belief",
+         "wire",
+         "car",
+         "bus",
+         "star",
+         "river",
+         "hat",
+         "skirt",
+         "train"
+      ],
+      "good_words": ["car", "bus", "train"]
+   },
+   {
+      "question": "Select albums, that got a score higher than Hellboy by Lil Peep",
+      "all_words": [
+         "skinty fia",
+         "omnium gatherum",
+         "origin of symmetry",
+         "motomami",
+         "kid a mnesia",
+         "heroes",
+         "donda",
+         "solar power",
+         "toxicity"
+      ],
+      "good_words": ["kid a mnesia", "heroes"]
+   }
+]

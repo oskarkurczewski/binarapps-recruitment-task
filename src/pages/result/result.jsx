@@ -6,11 +6,24 @@ import { dataContext } from "../../context/dataContext";
 const ResultPage = () => {
    const { state, dispatch } = useContext(dataContext);
 
+   const handleLogout = (e) => {
+      e.preventDefault();
+
+      dispatch({
+         type: "LOGOUT",
+      });
+   };
+
    return (
       <section className="result-page">
          <div className="result-wrapper">
             <p className="result-title"> Congratulations, {state.username}!</p>
-            <p className="result-points">You earned {state.points} points!</p>
+            <p className="result-points">
+               You earned <strong>{state.points}</strong> points!
+            </p>
+            <button className="button" onClick={handleLogout}>
+               Play again
+            </button>
          </div>
       </section>
    );

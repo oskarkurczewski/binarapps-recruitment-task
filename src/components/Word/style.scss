@@ -1,0 +1,16 @@
+.word-wrapper {
+   margin: 3px;
+   color: rgb(88, 88, 88);
+   text-align: center;
+
+   &.selected {
+      color: rgb(24, 24, 24);
+      font-weight: bold;
+   }
+
+   .word:hover {
+      cursor: pointer;
+      font-weight: bolder;
+      color: rgb(199, 75, 4);
+   }
+}
