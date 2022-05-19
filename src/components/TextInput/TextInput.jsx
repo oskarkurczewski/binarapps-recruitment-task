@@ -1,11 +1,16 @@
 import React from "react";
 import "./style.scss";
 
-const TextInput = ({ value, label, onChange }) => {
+const TextInput = ({ value, placeholder, label, onChange }) => {
    return (
       <div className="text-input-wrapper">
-         <p>{label}</p>
-         <input type="text" value={value} onChange={onChange}></input>
+         <p className="text-input-label">{label}</p>
+         <input
+            placeholder={placeholder}
+            type="text"
+            value={value}
+            onChange={onChange}
+         ></input>
       </div>
    );
 };

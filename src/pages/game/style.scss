@@ -1,0 +1,31 @@
+.game-page {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+
+   .game-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: rgb(240, 240, 240);
+      // background-color: black;
+      width: 60vw;
+      height: 40vw;
+
+      .game {
+         width: 100%;
+         height: 100%;
+         background-color: rgb(240, 240, 240);
+         margin-bottom: 1rem;
+      }
+
+      .buttons-container {
+         display: flex;
+         width: 300px;
+         flex-direction: row;
+         justify-content: space-between;
+      }
+   }
+}

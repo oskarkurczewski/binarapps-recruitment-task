@@ -11,10 +11,10 @@ const LoginPage = () => {
    const navigate = useNavigate();
    const location = useLocation();
 
-   // If already logged in redirect to notes page
+   // If already logged in redirect to game page
    useEffect(() => {
       if (state.username) {
-         const from = location.state?.from?.pathname || "/";
+         const from = location.state?.from?.pathname || "/game";
          navigate(from, { replace: true });
       }
    }, [state]);
@@ -35,11 +35,14 @@ const LoginPage = () => {
       <section className="login-page">
          <div className="login-wrapper">
             <form onSubmit={handleLogin}>
-               <TextInput
-                  label="Your name"
-                  onChange={(e) => setUsername(e.target.value)}
-               ></TextInput>
-               <button type="submit">Play right now!</button>
+               <div className="form-wrapper">
+                  <TextInput
+                     label="Hello, wanna play a game? :)"
+                     placeholder={"Just give us your name!"}
+                     onChange={(e) => setUsername(e.target.value)}
+                  ></TextInput>
+                  <button type="submit">Let's go!</button>
+               </div>
             </form>
          </div>
       </section>

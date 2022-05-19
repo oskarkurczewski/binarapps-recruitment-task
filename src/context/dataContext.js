@@ -4,6 +4,7 @@ const dataContext = createContext();
 
 const initialState = {
    username: localStorage.getItem("username") || "",
+   points: 0,
    currentRoute: {},
    loading: false,
    errors: [],
@@ -26,6 +27,10 @@ const dataReducer = (state, action) => {
             ...initialState,
             username: "",
          };
+      }
+
+      default: {
+         return initialState;
       }
    }
 };
