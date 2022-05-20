@@ -1,6 +1,6 @@
 # BinarApps recruitment task - wordcloud game
 
-Live demo: https://wordcloud-game-task.web.app
+Live demo: https://wordcloud-game-task.web.app/login
 
 ## Author: Oskar Kurczewski (oskarkurczewskifotografia@gmail.com)
 
