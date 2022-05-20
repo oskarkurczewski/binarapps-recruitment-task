@@ -14,7 +14,6 @@ const LoginPage = () => {
    // If already logged in redirect to game page
    useEffect(() => {
       if (state.username) {
-         const from = location.state?.from?.pathname || "/game";
          navigate("/game", { replace: true });
       }
    }, [state]);

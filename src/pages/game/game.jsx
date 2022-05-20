@@ -60,11 +60,18 @@ const GamePage = () => {
                   <button
                      id="answers-button"
                      onClick={(e) => {
+                        const goodAnswers = words[wordsetNumber].good_words.filter(
+                           (value) => selectedWords.includes(value)
+                        ).length;
+
+                        const badAnswers = selectedWords.length - goodAnswers;
+
+                        const unselectedGoodAnswers =
+                           words[wordsetNumber].good_words.length - goodAnswers;
+
                         setPoints(
                            dispatch,
-                           words[wordsetNumber].good_words.filter((value) =>
-                              selectedWords.includes(value)
-                           ).length * 2
+                           goodAnswers * 2 - (unselectedGoodAnswers + badAnswers)
                         );
 
                         e.target.className = "button-hidden";
