@@ -38,6 +38,27 @@
       "good_words": ["mercedes", "bmw", "audi"]
    },
    {
+      "question": "Select foods",
+      "all_words": [
+         "pizza",
+         "guitar",
+         "water",
+         "WD40",
+         "street",
+         "panda",
+         "wheel",
+         "node",
+         "cloud",
+         "lasagne",
+         "live chicken",
+         "fried chicken",
+         "Mexico",
+         "Venezuela",
+         "amplitude"
+      ],
+      "good_words": ["pizza", "lasagne", "fried chicken"]
+   },
+   {
       "question": "Select colors",
       "all_words": [
          "jeans",
