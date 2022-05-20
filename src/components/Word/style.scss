@@ -1,5 +1,5 @@
 .word-wrapper {
-   margin: 3px;
+   // margin: 3px;
    color: rgb(88, 88, 88);
    text-align: center;
 
@@ -12,5 +12,35 @@
       cursor: pointer;
       font-weight: bolder;
       color: rgb(0, 221, 184);
+   }
+
+   &.good-answer {
+      position: relative;
+      font-weight: bold;
+      color: rgb(20, 220, 20);
+   }
+
+   &.good-answer::before {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+      color: rgb(13, 158, 13);
+      content: "Good";
+   }
+
+   &.bad-answer {
+      position: relative;
+      font-weight: bold;
+      color: rgb(220, 20, 20);
+   }
+
+   &.bad-answer::before {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+      color: rgb(158, 13, 13);
+      content: "Bad";
    }
 }

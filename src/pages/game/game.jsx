@@ -50,6 +50,7 @@ const GamePage = () => {
                            isSelected={selectedWords.find((element) => {
                               return element === w;
                            })}
+                           id={w}
                            key={index}
                            content={w}
                         />
@@ -60,6 +61,35 @@ const GamePage = () => {
                   <button
                      id="answers-button"
                      onClick={(e) => {
+                        const goodAnswers = words[wordsetNumber].good_words.filter(
+                           (value) => selectedWords.includes(value)
+                        );
+
+                        const badAnswers = selectedWords.filter(
+                           (value) =>
+                              words[wordsetNumber].good_words.indexOf(value) === -1
+                        );
+
+                        goodAnswers.forEach((element) => {
+                           document.getElementById(element).className =
+                              "word-wrapper good-answer";
+                        });
+
+                        badAnswers.forEach((element) => {
+                           document.getElementById(element).className =
+                              "word-wrapper bad-answer";
+                        });
+
+                        e.target.className = "button-hidden";
+                        document.getElementById("finish-button").className = "";
+                     }}
+                  >
+                     Check answers
+                  </button>
+                  <button
+                     id="finish-button"
+                     className="button-hidden"
+                     onClick={() => {
                         const goodAnswers = words[wordsetNumber].good_words.filter(
                            (value) => selectedWords.includes(value)
                         ).length;
@@ -74,16 +104,6 @@ const GamePage = () => {
                            goodAnswers * 2 - (unselectedGoodAnswers + badAnswers)
                         );
 
-                        e.target.className = "button-hidden";
-                        document.getElementById("finish-button").className = "";
-                     }}
-                  >
-                     Check answers
-                  </button>
-                  <button
-                     id="finish-button"
-                     className="button-hidden"
-                     onClick={() => {
                         navigate("/result", { replace: false });
                      }}
                   >
