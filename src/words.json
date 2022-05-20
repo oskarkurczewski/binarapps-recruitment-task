@@ -71,7 +71,7 @@
       "good_words": ["car", "bus", "train"]
    },
    {
-      "question": "Select albums, that got a score higher than Hellboy by Lil Peep",
+      "question": "Select albums that Pitchfork.com gave a score higher than Hellboy by Lil Peep",
       "all_words": [
          "skinty fia",
          "omnium gatherum",

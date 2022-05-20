@@ -15,7 +15,7 @@ const LoginPage = () => {
    useEffect(() => {
       if (state.username) {
          const from = location.state?.from?.pathname || "/game";
-         navigate(from, { replace: true });
+         navigate("/game", { replace: true });
       }
    }, [state]);
 

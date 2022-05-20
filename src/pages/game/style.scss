@@ -32,17 +32,6 @@
          border-radius: 15px;
          margin-bottom: 1rem;
          align-content: space-around;
-
-         .game-word {
-            color: rgb(88, 88, 88);
-            text-align: center;
-         }
-
-         .game-word:hover {
-            cursor: pointer;
-            font-weight: bold;
-            color: rgb(199, 75, 4);
-         }
       }
 
       .buttons-container {
@@ -50,6 +39,10 @@
          width: 300px;
          flex-direction: row;
          justify-content: space-between;
+
+         .button-hidden {
+            display: none;
+         }
       }
    }
 }

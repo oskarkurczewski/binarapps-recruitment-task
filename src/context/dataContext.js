@@ -29,6 +29,13 @@ const dataReducer = (state, action) => {
          };
       }
 
+      case "SET_POINTS": {
+         return {
+            ...state,
+            points: action.payload.points,
+         };
+      }
+
       default: {
          return initialState;
       }

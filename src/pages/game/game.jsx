@@ -1,15 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./style.scss";
-// import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { dataContext } from "../../context/dataContext";
 import words from "../../words.json";
 import Word from "../../components/Word/Word";
-import { isLabelWithInternallyDisabledControl } from "@testing-library/user-event/dist/utils";
+import { setPoints } from "../../actions/gameActions";
 
 const GamePage = () => {
    const { state, dispatch } = useContext(dataContext);
    const [wordsetNumber, setWordsetNumber] = useState("");
    const [selectedWords, setSelectedWords] = useState([]);
+   let navigate = useNavigate();
 
    const handleLogout = (e) => {
       e.preventDefault();
@@ -24,8 +25,6 @@ const GamePage = () => {
 
       return () => {};
    }, [wordsetNumber]);
-
-   console.log(selectedWords);
 
    return (
       <section className="game-page">
@@ -47,7 +46,6 @@ const GamePage = () => {
                                       })
                                    )
                                  : setSelectedWords([...selectedWords, w]);
-                              console.log(selectedWords);
                            }}
                            isSelected={selectedWords.find((element) => {
                               return element === w;
@@ -60,11 +58,29 @@ const GamePage = () => {
                </div>
                <div className="buttons-container">
                   <button
-                     onClick={() => {
-                        // console.log("todo");
+                     id="answers-button"
+                     onClick={(e) => {
+                        setPoints(
+                           dispatch,
+                           words[wordsetNumber].good_words.filter((value) =>
+                              selectedWords.includes(value)
+                           ).length * 2
+                        );
+
+                        e.target.className = "button-hidden";
+                        document.getElementById("finish-button").className = "";
                      }}
                   >
                      Check answers
+                  </button>
+                  <button
+                     id="finish-button"
+                     className="button-hidden"
+                     onClick={() => {
+                        navigate("/result", { replace: false });
+                     }}
+                  >
+                     Finish game
                   </button>
 
                   <button onClick={handleLogout}>Leave the game</button>

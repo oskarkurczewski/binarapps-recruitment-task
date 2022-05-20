@@ -17,9 +17,15 @@ const ResultPage = () => {
    return (
       <section className="result-page">
          <div className="result-wrapper">
-            <p className="result-title"> Congratulations, {state.username}!</p>
+            {state.points > 0 ? (
+               <p className="result-title"> Congratulations, {state.username}!</p>
+            ) : (
+               <p className="result-title">Sorry, {state.username}!</p>
+            )}
+
             <p className="result-points">
-               You earned <strong>{state.points}</strong> points!
+               You earned <strong>{state.points}</strong> point
+               {state.points === 1 ? "" : "s"}!
             </p>
             <button className="button" onClick={handleLogout}>
                Play again
